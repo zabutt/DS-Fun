@@ -44,7 +44,8 @@ def main():
 
     elif chart_type == "Line Chart":
         st.subheader("Line Chart")
-        fig = px.line(data, x='X', y='Y', line_shape='linear', line_dash='solid', line_color=color)
+        fig = px.line(data, x='X', y='Y', line_shape='linear')
+        fig.update_traces(line=dict(color=color, dash='solid'))
         st.plotly_chart(fig)
 
 if __name__ == "__main__":
