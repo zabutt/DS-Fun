@@ -21,6 +21,7 @@ def main():
     # Add title and description
     st.title('Fun Data Science App')
     st.write("Generate a random dataset and customize the appearance of your chart!")
+    st.write("The random data set is being generated using sine function")
 
     # Sidebar for customization options
     st.sidebar.subheader("Customization Options")
