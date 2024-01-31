@@ -4,12 +4,16 @@ import numpy as np
 import plotly.express as px
 
 def generate_random_data(num_points):
-    # Generate random dataset
+    # Generate data for a sine wave
+    x_values = np.linspace(0, 2 * np.pi, num_points)
+    y_values = np.sin(x_values)
+    
     data = {
-        'X': np.random.rand(num_points),
-        'Y': np.random.rand(num_points),
+        'X': x_values,
+        'Y': y_values,
     }
     return pd.DataFrame(data)
+
 
 def main():
     st.set_page_config(page_title='Fun Data Science App', page_icon=':chart_with_upwards_trend:')
